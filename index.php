@@ -88,6 +88,9 @@
                                 <td style="text-align:center;"><?php echo $data["email"];?></td>
                                 <td style="text-align:center;"><?php echo $data["alamat"];?></td>
                                 <td style="text-align:center;">
+                                    <a href="detail.php?id=<?php echo htmlspecialchars($data['id']); ?>">
+                                        <button>Detail</button>
+                                    </a>
                                     <a href="form_edit.php?id=<?php echo htmlspecialchars($data['id']); ?>">
                                         <button>Edit</button>
                                     </a>
