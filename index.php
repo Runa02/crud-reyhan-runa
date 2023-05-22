@@ -34,9 +34,6 @@
         if (isset($_GET['id'])) {
             $id=htmlspecialchars($_GET["id"]);
     
-            $sql="delete from user where id='$id' ";
-            $hasil=mysqli_query($kon,$sql);
-    
             //Kondisi apakah berhasil atau tidak
                 if ($hasil) {
                     header("Location:index.php");
@@ -94,7 +91,7 @@
                                     <a href="form_edit.php?id=<?php echo htmlspecialchars($data['id']); ?>">
                                         <button>Edit</button>
                                     </a>
-                                    <a href="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>?id=<?php echo $data['id']; ?>">
+                                    <a href="delete.php?id=<?php echo htmlspecialchars($data['id']); ?>">
                                         <button>Delete</button>
                                     </a>
                                 </td>
